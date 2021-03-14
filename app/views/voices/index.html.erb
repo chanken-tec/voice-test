@@ -1,0 +1,40 @@
+<%= render "shared/header" %>
+<main class="main">
+<%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      iPhoneの使い方簡単検索
+    </h2>
+    <p class='service-explain'>
+      音声認識による最適なマニュアルを提供します
+    </p>
+  </div>
+  <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
+
+<%# 音声検索部分 %>
+
+  <div class="main_inner">
+    <div class="voice-get" >
+      <button id="start-btn", class="start-btn">start</button>
+      <button id="stop-btn", class="stop-btn">stop</button>
+      <div id="result-div", class="result-div"></div>
+      <p class='search-example1'>
+        (声検索例）WiFiの設定方法は？
+      </p>
+      <p class='search-example2'>
+                  マナーモードを設定したい。
+      </p>
+  </div>
+    <%# ログインしているときは以下を表示する %>
+      <%# <div class="greeting"> %>
+        <%# こんにちは、 %>
+        <%# <%= link_to "ユーザー名さん", root_path, class: :greeting__link%>
+      <%# </div> %>
+    <%# // ログインしているときは上記を表示する %>
+    <div class="card__wrapper">
+      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+    </div>
+  </div>
+  <%# /音声検索部分 %>
+</main>
+<%= render "shared/footer" %>
