@@ -16,7 +16,7 @@
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
-| voice_data       | text       |                                |
+| voice_data       | text       | null: false                    |
 | history          | text       |                                |
 
 ### Association
@@ -27,7 +27,7 @@
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
-| URL              | string     |                                |
+| URL              | string     | null: false                   |
 
 ### Association
 - belongs_to :voice
