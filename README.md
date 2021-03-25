@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
 
-Things you may want to cover:
+| Column                   | Type     | Options                   |
+| ------------------------ | -------- | ------------------------- |
+| nickname                 | string   | null: false               |
+| email                    | string   | null: false, unique: true |
+| encrypted_password       | string   | null: false               |
 
-* Ruby version
+### Association
+- has_many :voices
+- has_many :manuals
 
-* System dependencies
+## voicesテーブル
 
-* Configuration
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| voice_data       | text       |                                |
+| history          | text       |                                |
 
-* Database creation
+### Association
+- belongs_to :user
+- has_many   :manuals
 
-* Database initialization
+## manualsテーブル
 
-* How to run the test suite
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| URL              | string     |                                |
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :voice
+- belongs_to :user
